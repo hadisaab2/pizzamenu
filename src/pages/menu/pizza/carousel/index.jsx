@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Container, CarouselContainer, Pizza } from "./styles";
 import $ from "jquery";
 
-export default function Carousel({ pizza,currentIndex,setCurrentIndex,rotateAndHandle,handleleft,handleright }) {
+export default function Carousel({ pizza,currentIndex,pizzaSize,rotateAndHandle,handleleft,handleright }) {
   const divRef = useRef(null);
   const [startX, setStartX] = useState(null);
   const handleTouchStart = (event) => {
@@ -33,7 +33,7 @@ export default function Carousel({ pizza,currentIndex,setCurrentIndex,rotateAndH
         onTouchMove={handleTouchMove}
       >
         {pizza.map((p, index) => (
-          <Pizza index={index} currentIndex={currentIndex} src={p.image} />
+          <Pizza  pizzaSize={pizzaSize} index={index} currentIndex={currentIndex} src={p.image} />
         ))}
       </CarouselContainer>
     </Container>

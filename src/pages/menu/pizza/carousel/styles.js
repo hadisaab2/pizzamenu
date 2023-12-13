@@ -13,17 +13,32 @@ export const Container = styled.div`
 export const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 
 `;
+const findsize = (Size) => {
+  switch (Size) {
+    case "M":
+      return "330px";
+      break;
+    case "L":
+      return "360px";
+      break;
+    case "S":
+      return "280px";
+      break;
+    default:
+      break;
+  }
+};
 export const Pizza = styled.img`
   position: absolute;
-  width:${(props)=>props.index==props.currentIndex?"330px":"150px"};   
-  height:${(props)=>props.index==props.currentIndex?"330px":"150px"};
+  width:${(props)=>props.index==props.currentIndex?findsize(props.pizzaSize):"150px"};   
+  height:${(props)=>props.index==props.currentIndex?findsize(props.pizzaSize):"150px"};
   transition: height 0.5s ease, transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
   overflow: hidden;
   z-index: 9;

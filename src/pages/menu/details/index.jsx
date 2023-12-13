@@ -1,11 +1,20 @@
-import styled from 'styled-components';
+import React, { useState } from 'react'
+import { Container,Price,Size,SizeContainer } from './styles'
 
+export default function Details({price,setpizzaSize,pizzaSize}) {
 
-export const Container = styled.div`
-height: 60%;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-overflow: hidden;
-`;
+    const handlesize = (size) =>{
+        setpizzaSize(size)
+    }
+  return (
+    <Container>
+        <Price>{price}$</Price>
+        <SizeContainer>
+            <Size active={pizzaSize=="L"} onClick={()=>handlesize("L")}>L</Size>
+            <Size active={pizzaSize=="M"} onClick={()=>handlesize("M")}>M</Size>
+            <Size active={pizzaSize=="S"} onClick={()=>handlesize("S")}>S</Size>
+
+        </SizeContainer>
+    </Container>
+  )
+}
