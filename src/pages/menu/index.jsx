@@ -18,10 +18,10 @@ import $ from "jquery";
 
 export default function Index() {
   const pizza = [
-    { type: "Pepperoni", image: pizza1 },
-    { type: "Pepperoni", image: pizza2 },
-    { type: "Pepperoni", image: pizza3 },
-    { type: "Pepperoni", image: pizza4 },
+    { type: "Pepperoni", image: pizza1,price:9.8 },
+    { type: "Pepperoni", image: pizza2,price:12 },
+    { type: "Pepperoni", image: pizza3,price:13 },
+    { type: "Pepperoni", image: pizza4,price:10 },
   ];
   const [currentIndex, setCurrentIndex] = useState(2);
 

@@ -22,8 +22,8 @@ export const CarouselContainer = styled.div`
 `;
 export const Pizza = styled.img`
   position: absolute;
-  width:${(props)=>props.index==props.currentIndex?"380px":"150px"};   
-  height:${(props)=>props.index==props.currentIndex?"380px":"150px"};
+  width:${(props)=>props.index==props.currentIndex?"330px":"150px"};   
+  height:${(props)=>props.index==props.currentIndex?"330px":"150px"};
   transition: height 0.5s ease, transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
   overflow: hidden;
   z-index: 9;

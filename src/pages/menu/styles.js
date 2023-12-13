@@ -16,8 +16,8 @@ position: relative;
 transition:transform 0.3s ease-in-out;
 `;
 export const ServingContainer = styled.div`
-height: 400px;
-width: 400px;
+height: 350px;
+width: 350px;
 position: absolute;
 z-index: 1;
 display: flex;
@@ -30,7 +30,7 @@ export const PlusContainer = styled.div`
 height: 33px;
 width: 33px;
 position: absolute;
-right: 10px;
+right: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -46,7 +46,7 @@ width: 33px;
 border-radius: 50%;
 background-color:white;
 position: absolute;
-left: 10px;
+left: 30px;
 display: flex;
 align-items: center;
 justify-content: center;
